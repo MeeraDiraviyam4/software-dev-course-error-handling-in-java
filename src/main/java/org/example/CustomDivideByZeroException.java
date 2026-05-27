@@ -7,12 +7,12 @@ public class CustomDivideByZeroException extends  Exception {
     /**
      * The numerator of the failed division operation.
      */
-    private double a;
+    private  final double a;
 
     /**
      * The denominator of the failed division operation.
      */
-    private double b;
+    private final double b;
 
     /**
      * Get the numerator of the failed division operation.
@@ -35,8 +35,10 @@ public class CustomDivideByZeroException extends  Exception {
     /**
      * Constructor for the CustomDivideByZeroException.
      */
-    public CustomDivideByZeroException() {
-        // TODO: Modify this constructor to accept and store the two values attempted to be divided
+    public CustomDivideByZeroException(double a, double b) {
+
         super("Attempted to divide by zero");
+        this.a = a;
+        this.b = b;
     }
 }
